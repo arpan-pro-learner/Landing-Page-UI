@@ -1,38 +1,231 @@
-.App {
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Mono&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.app {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Space mono', sans-serif;
+  font-weight: 800;
+  padding-left: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-links {
+  display: flex;
+  margin-left: auto; /* Move the nav links to the right */
+  font-family: 'Space Mono', sans-serif;
+  gap: 50px;
+}
+
+.nav-links a:focus {
+  color: black;
+  font-weight: bold;
+}
+
+.nav-row {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-links a {
+  text-decoration: none;
+  color: #b7b7b7;
+  margin-right: 10px;
+  display: flex;
+  justify-content: flex-start;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.menu-button {
+  padding: 10px 40px;
+  background-color: transparent;
+  color: black;
+  border: 1px solid rgb(181, 181, 181);
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 800;
+  font-family: 'Space mono', sans-serif;
+  font-size: 1rem;
+}
+
+/* App.css */
+.hero-section {
+  text-align: left;
+  padding: 50px;
+  font-family: 'Space mono', sans-serif;
+  display: flex; /* Change display to flex */
+  flex-direction: column; /* Stack the items vertically */
+  align-items: flex-start; /* Align items to the start of the container */
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 30px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.main-heading {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  width: 60%; /* Set width to 50% */
+  margin-top: 0px;
+}
+
+.subheading {
+  color: #9a9a9a;
+  margin-bottom: 0px;
+}
+
+.start-button {
+  padding: 15px 30px;
+  background-color: #000;
+  color: #ffffff;
+  border: 1px solid black;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Space mono', sans-serif;
+}
+
+.next-gen-heading {
+  font-size: 1.5rem;
+  color: #9a9a9a;
+  width: 30%;
+}
+
+/* Add this CSS to your App.css file */
+.cards-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10rem; /* Adjust margin as needed */
+  width: 100%;
+}
+
+.card {
+  width: 30%; /* Adjust width as needed */
+  padding: 4rem;
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  color: #ffffff;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+margin: 0.2rem;
+
+}
+
+
+.card:nth-child(1) {
+  background-image: url('https://images.pexels.com/photos/6985129/pexels-photo-6985129.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+}
+
+.card:nth-child(2) {
+  background-image: url('https://images.pexels.com/photos/6985267/pexels-photo-6985267.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+}
+
+.card:nth-child(3) {
+  background-image: url('https://images.pexels.com/photos/6985048/pexels-photo-6985048.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  font-size: 5rem;
+}
+
+.card-button {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 30px;
+  width: min-content;
+  font-family: 'Space mono', sans-serif;
+}
+
+.card-subheading {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.card-action-button {
+  padding: 20px 10px;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Space mono', sans-serif;
+}
+
+.card-links a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: underline 2px;
+}
+
+.card-bottom-heading {
+  font-size: 1.5rem;
+  margin-top: auto; /* Push the heading to the bottom */
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+  .cards-section {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+  }
+
+  .card {
+    width: 100%; /* Make cards full width on smaller screens */
+  }
+}
+/* Add responsiveness */
+@media (max-width: 768px) {
+  .cards-section {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+  }
+
+  .card {
+    width: 100%; /* Make cards full width on smaller screens */
+    margin-bottom: 20px; /* Add margin between cards */
+  }
+}
+
+/* Add responsiveness for medium screens */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .cards-section {
+    justify-content: space-around; /* Center the cards on medium screens */
+  }
+
+  .card {
+    margin: 10px; /* Add margin on all sides for medium screens */
+  }
+}
+/* Add responsiveness for small screens */
+@media (max-width: 768px) {
+  .cards-section {
+    flex-direction: column; /* Stack cards vertically on small screens */
+  }
+
+  .card {
+    width: 100%; /* Make cards full width on small screens */
+    margin-bottom: 20px; /* Add margin between cards */
   }
 }
